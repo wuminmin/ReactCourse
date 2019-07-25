@@ -10,6 +10,7 @@ class Content extends React.Component {
       <div className='container'>
       <Picture src={picture.src}>
         // 这里放置的内容就是 props.children
+        
       </Picture>
       <ShoppingList name="张三" />
 
