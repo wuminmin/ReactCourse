@@ -10,10 +10,9 @@ class Content extends React.Component {
       <div className='container'>
       <Picture src={picture.src}>
         // 这里放置的内容就是 props.children
-        
       </Picture>
       <ShoppingList name="张三" />
-
+      <Square></Square>
     </div>
     );
   }
@@ -26,6 +25,27 @@ const Picture = (props) => {
       {props.children}
     </div>
   )
+}
+
+class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: '未点击',
+      count:0,
+    };
+  }
+
+  render() {
+    return (
+      <button
+        className="square"
+        onClick={() => this.setState({value: '已点击',count:this.state.count+1})}
+      >
+        {this.state.value}{this.state.count}
+      </button>
+    );
+  }
 }
 
 export default Content;
