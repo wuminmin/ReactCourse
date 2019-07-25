@@ -15,5 +15,9 @@ export default {
         path: '/register',
         component: './register',
       },
+      {
+        path: '/inputDemo',
+        component: './inputDemo',
+      },
     ],
 };
